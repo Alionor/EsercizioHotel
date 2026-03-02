@@ -10,9 +10,11 @@ public class Stanza {
     private Hotel hotel;
     private List<Cliente> clienti = new ArrayList<>();
 
-    public Stanza(String numeroStanza, float quantoAPersona) {
+    public Stanza(String numeroStanza, float quantoAPersona, Hotel hotel, List<Cliente> clienti) {
         this.numeroStanza = numeroStanza;
         this.quantoAPersona = quantoAPersona;
+        this.hotel = hotel;
+        this.clienti = clienti;
     }
 
     public Stanza() {
@@ -32,6 +34,22 @@ public class Stanza {
 
     public void setQuantoAPersona(float quantoAPersona) {
         this.quantoAPersona = quantoAPersona;
+    }
+
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
+    public List<Cliente> getClienti() {
+        return clienti;
+    }
+
+    public void setClienti(List<Cliente> clienti) {
+        this.clienti = clienti;
     }
 
     @Override
