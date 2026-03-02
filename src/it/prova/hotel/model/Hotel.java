@@ -33,8 +33,13 @@ public class Hotel {
         this.stelle = stelle;
     }
 
-   /* public float calcolaConto(Stanza input) {
-    }*/
+    public float calcolaConto(Stanza input) {
+        float sommaTotaleDaPagare = 0;
+        for (Cliente cliente: input.getClienti()) {
+            sommaTotaleDaPagare += input.getQuantoAPersona();
+        }
+        return sommaTotaleDaPagare;
+    }
 
     @Override
     public String toString() {
