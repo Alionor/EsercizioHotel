@@ -36,7 +36,7 @@ public class Hotel {
     public float calcolaConto(Stanza input) {
         float sommaTotaleDaPagare = 0;
         for (Cliente cliente: input.getClienti()) {
-            sommaTotaleDaPagare += input.getQuantoAPersona();
+            sommaTotaleDaPagare += cliente.sommaRealeDaPagare();
         }
         return sommaTotaleDaPagare;
     }
