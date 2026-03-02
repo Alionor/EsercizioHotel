@@ -36,4 +36,12 @@ public class Hotel {
    /* public float calcolaConto(Stanza input) {
     }*/
 
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "ragioneSociale='" + ragioneSociale + '\'' +
+                ", stelle=" + stelle +
+                ", stanze=" + stanze +
+                '}';
+    }
 }
