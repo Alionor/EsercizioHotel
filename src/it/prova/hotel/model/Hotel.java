@@ -34,8 +34,10 @@ public class Hotel {
     }
 
     public float calcolaConto(Stanza input) {
+        if (input == null) return -1;
         float sommaTotaleDaPagare = 0;
         for (Cliente cliente: input.getClienti()) {
+            if (!cliente.stanza.equals(input) || cliente.stanza == null) return -1;
             sommaTotaleDaPagare += cliente.sommaRealeDaPagare();
         }
         return sommaTotaleDaPagare;
